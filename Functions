@@ -1,0 +1,34 @@
+def fibonacci(n):
+    """
+    Generate the Fibonacci sequence up to n terms.
+    
+    Args:
+    n (int): The number of terms in the Fibonacci sequence to generate.
+    
+    Returns:
+    list: A list containing the first n terms of the Fibonacci sequence.
+    """
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+def main():
+    """
+    Main function to get user input and display the Fibonacci sequence.
+    """
+    n = input("Enter the number of terms: ")
+
+    if not n.isdigit() or int(n) <= 0:
+        print("The number of terms must be a positive integer.")
+        return
+
+    n = int(n)
+    sequence = fibonacci(n)
+    print(f"The first {n} terms of the Fibonacci sequence are:")
+    print(sequence)
+
+if __name__ == "__main__":
+    main()
