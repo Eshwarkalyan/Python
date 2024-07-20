@@ -1,0 +1,21 @@
+# simple_list_program
+
+def main():
+    """
+    Main function to demonstrate basic list operations.
+    """
+    # Initialize an empty list
+    my_list = []
+
+    # Add elements to the list
+    my_list.append("C")  # Add "Apple" to the list
+    my_list.append("python")  # Add "Banana" to the list
+    my_list.append("java")  # Add "Cherry" to the list
+
+    # Display the list
+    print("Items in the list:")
+    for item in my_list:  # Iterate over each item in the list
+        print(item)  # Print each item
+
+if __name__ == "__main__":# when script runs directly then this __name__ variable is usefull 
+    main()  # Call the main function to run the program
