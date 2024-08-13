@@ -1,0 +1,33 @@
+def factorial(n):
+
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def main():
+    try:
+        # Prompt the user to enter a number and converting it to an integer
+        num = int(input("Enter a non-negative integer: "))
+
+        if num < 0:
+            # Manually raise a ValueError if the number is negative
+            raise ValueError("Negative numbers do not have a factorial.")
+
+        result = factorial(num)
+
+        print(f"The factorial of {num} is {result}")  
+
+    except ValueError as error:
+        # If a ValueError occurs, this block will execute
+        # 'error' is the variable that holds the exception object, and we print its message
+        print(f"Error: {error}")
+
+    finally:
+        # The finally block executes no matter what, whether an exception was raised or not
+        print("Program ended.")
+
+# Check if this script is being run directly (not imported as a module)
+if __name__ == "__main__":
+    # Call the main function to start the program
+    main()
